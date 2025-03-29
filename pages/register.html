@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Room Type 1 at RUKSABAI Room Service">
+    <meta name="keywords" content="Room, Booking, RUKSABAI">
+    <meta name="author" content="Your Name">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="auth.css">
+    <title>Book Your Stay at RUKSABAI | Room Type 1</title>
+</head>
+<body>
+    <nav>
+        <div class="nav__bar">
+            <div class="logo">
+                <div>RSB</div>
+                <span>RUKSABAI<br />Room Service</span>
+            </div>
+            <div class="nav__menu__btn">
+                <i class="ri-menu-line"></i>
+            </div>
+            <ul class="nav__links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#room">Room</a></li>
+                <li class="booking">
+                    <a href="#" class="booking__btn">Booking</a>
+                    <ul class="booking-dropdown">
+                        <li><a href="Type1.html">Room Type 1</a></li>
+                        <li><a href="Type2.html">Room Type 2</a></li>
+                        <li><a href="Type3.html">Room Type 3</a></li>
+                    </ul>
+                </li>
+                <li><a href="Service.html">Service</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="header">
+        <div class="section__container header__container">
+            <div class="text-content">
+                <h1>Register</h1>
+            </div>
+        </div>
+    </header>
+
+    <main> 
+        <div class="info-box fade-in">
+            <div class="auth-container">
+            <h1>สมัครสมาชิก</h1>
+            <form id="registerForm">
+                <label>ชื่อ</label>
+                <input type="text" id="firstName" required placeholder="กรอกชื่อ">
+    
+                <label>นามสกุล</label>
+                <input type="text" id="lastName" required placeholder="กรอกนามสกุล">
+    
+                <label>ชื่อผู้ใช้</label>
+                <input type="text" id="regUsername" required placeholder="ตั้งชื่อผู้ใช้">
+    
+                <label>เพศ</label>
+                <select id="gender" required>
+                    <option value="">เลือกเพศ</option>
+                    <option value="male">ชาย</option>
+                    <option value="female">หญิง</option>
+                    <option value="other">อื่นๆ</option>
+                </select>
+    
+                <label>สัญชาติ</label>
+                <select id="nationality" required>
+                    <option value="">เลือกสัญชาติ</option>
+                    <option value="Thai">ไทย</option>
+                    <option value="Lao">ลาว</option>
+                    <option value="Myanmar">พม่า</option>
+                    <option value="Chinese">จีน</option>
+                </select>
+    
+                <label>หมายเลขบัตรประชาชน</label>
+                <input type="text" id="idCard" required maxlength="13" placeholder="กรอกหมายเลขบัตรประชาชน" pattern="\d{13}">
+    
+                <label>ข้อมูลติดต่อ</label>
+                <input type="text" id="contactInfo" required placeholder="กรอกข้อมูลติดต่อ">
+    
+                <label>ที่อยู่ปัจจุบัน</label>
+                <input type="text" id="address" required placeholder="กรอกที่อยู่ปัจจุบัน">
+    
+                <label>อีเมล</label>
+                <input type="email" id="email" required placeholder="กรอกอีเมล" onblur="validateEmail()">
+    
+                <label>เบอร์โทรศัพท์</label>
+                <input type="tel" id="phone" required placeholder="กรอกเบอร์โทร" pattern="^[0-9]{10}$">
+    
+                <label>เบอร์โทรศัพท์บุคคลติดต่อฉุกเฉิน</label>
+                <input type="tel" id="emergencyPhone" required placeholder="เบอร์โทรศัพท์บุคคลติดต่อฉุกเฉิน" pattern="^[0-9]{10}$">
+    
+                <label>ยานพาหนะ</label>
+                <select id="vehicle" required>
+                    <option value="">เลือกยานพาหนะ</option>
+                    <option value="none">ไม่มี</option>
+                    <option value="car">รถยนต์</option>
+                    <option value="motorcycle">รถมอเตอร์ไซด์</option>
+                    <option value="bicycle">รถจักรยาน</option>
+                </select>
+    
+                <label>สถานภาพสมรส</label>
+                <select id="maritalStatus" required>
+                    <option value="">เลือกสถานภาพสมรส</option>
+                    <option value="married">แต่งงานแล้ว</option>
+                    <option value="single">โสด</option>
+                    <option value="preferNotToSay">ไม่ประสงค์ที่จะกล่าว</option>
+                </select>
+    
+                <label>รหัสผ่าน</label>
+                <input type="password" id="regPassword" required placeholder="ตั้งรหัสผ่าน">
+    
+                <label>ยืนยันรหัสผ่าน</label>
+                <input type="password" id="confirmPassword" required placeholder="ยืนยันรหัสผ่าน">
+    
+                <button type="submit" class="btn">สมัครสมาชิก</button>
+            </form>
+            <p>มีบัญชีอยู่แล้ว? <a href="login.html">เข้าสู่ระบบ</a></p>
+        </div>
+    </main>
+    
+
+    <footer class="footer">
+        <div class="section__container footer__container">
+          <div class="footer__col">
+            <div class="logo footer__logo">
+              <div>RSB</div>
+              <span>RUKSABAI<br />Room Service</span>
+            </div>
+            <p class="section__description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil,
+              laudantium unde. Doloremque eaque debitis laborum labore voluptates
+              iste molestiae consectetur.
+            </p>
+            <ul class="footer__socials">
+              <li>
+                <a href="#"><i class="ri-youtube-fill"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="ri-instagram-line"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="ri-facebook-fill"></i></a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <h4>Contact Us</h4>
+            <div class="footer__links">
+              <li>
+                <span><i class="ri-phone-fill"></i></span>
+                <div>
+                  <h5>Phone Number</h5>
+                  <p>+89 0611404146</p>
+                </div>
+              </li>
+              <li>
+                <span><i class="ri-record-mail-line"></i></span>
+                <div>
+                  <h5>Email</h5>
+                  <p>RUKSABAI@gmail.com</p>
+                </div>
+              </li>
+              <li>
+                <span><i class="ri-map-pin-2-fill"></i></span>
+                <div>
+                  <h5>Location</h5>
+                  <p>First St. NYC</p>
+                </div>
+              </li>
+            </div>
+          </div>
+        </div>
+      </footer>
+  
+      <script src="https://unpkg.com/scrollreveal"></script>
+      <script src="Type.js"></script>
+
+      <script>
+        document.getElementById('loginForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // เช็คสำหรับ admin login แบบ manual
+            if (username === 'admin' && password === 'polpolpol') {
+                alert('เข้าสู่ระบบผู้ดูแลระบบสำเร็จ!');
+                window.location.href = 'admin.html';
+                return;
+            }
+
+            // ถ้าไม่ใช่ admin ให้เช็คผ่าน server
+            const response = await fetch('http://localhost:3000/login', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ username, password })
+            });
+
+            const result = await response.json();
+
+            if (result.success) {
+                localStorage.setItem('user', JSON.stringify({ username }));
+                alert('เข้าสู่ระบบสำเร็จ!');
+                window.location.href = 'rooms.html';
+            } else {
+                alert('ชื่อผู้ใช้หรือรหัสผ่านไม่ถูกต้อง');
+            }
+        });
+    </script>
+
+    </body>
+  </html>
+  

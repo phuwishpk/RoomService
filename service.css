@@ -1,0 +1,105 @@
+/* ตั้งค่าหน้าหลัก */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* โครงสร้างหลัก */
+.container {
+    display: flex;
+}
+
+/* เมนูด้านซ้าย */
+.sidebar {
+    width: 250px;
+    background: #333;
+    padding-top: 20px;
+    height: 100vh;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 10px;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 10px;
+    transition: 0.3s;
+}
+
+.sidebar ul li a:hover,
+.sidebar ul li a.active {
+    background: #575757;
+}
+
+/* เนื้อหาหลัก */
+.content {
+    flex-grow: 1;
+    padding: 20px;
+    background: white;
+}
+
+/* หัวข้อ */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h2 {
+    margin: 0;
+}
+
+/* ตารางข้อมูล */
+.booking-list table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.booking-list th, .booking-list td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+.booking-list th {
+    background: #004080;
+    color: white;
+}
+
+/* ปุ่ม */
+.booking-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.booking-btn:hover {
+    background-color: #45a049;
+}
+
+.contract-btn {
+    background-color: #FFA500;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.contract-btn:hover {
+    background-color: #FF8C00;
+}

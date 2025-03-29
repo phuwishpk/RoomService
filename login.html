@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Room Type 1 at RUKSABAI Room Service">
+    <meta name="keywords" content="Room, Booking, RUKSABAI">
+    <meta name="author" content="Your Name">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="auth.css">
+    <title>Login | RUKSABAI Room Service</title>
+</head>
+<body>
+    <nav>
+        <div class="nav__bar">
+            <div class="logo">
+                <div>RSB</div>
+                <span>RUKSABAI<br />Room Service</span>
+            </div>
+            <ul class="nav__links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#room">Room</a></li>
+                <li class="booking">
+                    <a href="#" class="booking__btn">Booking</a>
+                    <ul class="booking-dropdown">
+                        <li><a href="pages/Type1.html">Room Type 1</a></li>
+                        <li><a href="pages/Type2.html">Room Type 2</a></li>
+                        <li><a href="pages/Type3.html">Room Type 3</a></li>
+                    </ul>
+                </li>
+                <li><a href="pages/Service.html">Service</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="header">
+        <div class="section__container header__container">
+            <h1>เข้าสู่ระบบ</h1>
+        </div>
+    </header>
+
+    <main>
+        <div class="auth-container">
+            <h1>เข้าสู่ระบบ</h1>
+            <form id="loginForm" method="POST">
+                <label for="username">ชื่อผู้ใช้</label>
+                <input type="text" id="username" name="username" required placeholder="กรอกชื่อผู้ใช้">
+                
+                <label for="password">รหัสผ่าน</label>
+                <div class="password-container">
+                    <input type="password" id="password" name="pass_word" required placeholder="กรอกรหัสผ่าน">
+                    <i class="ri-eye-off-line toggle-password" onclick="togglePassword()"></i>
+                </div>
+                
+                <button type="submit" class="btn">เข้าสู่ระบบ</button>
+            </form>
+            <p>ยังไม่มีบัญชี? <a href="register.html">สมัครสมาชิก</a></p>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="section__container footer__container">
+            <div class="footer__col">
+                <div class="logo footer__logo">
+                    <div>RSB</div>
+                    <span>RUKSABAI<br />Room Service</span>
+                </div>
+                <p class="section__description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <ul class="footer__socials">
+                    <li><a href="#"><i class="ri-youtube-fill"></i></a></li>
+                    <li><a href="#"><i class="ri-instagram-line"></i></a></li>
+                    <li><a href="#"><i class="ri-facebook-fill"></i></a></li>
+                    <li><a href="#"><i class="ri-linkedin-fill"></i></a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <h4>Contact Us</h4>
+                <div class="footer__links">
+                    <li>
+                        <span><i class="ri-phone-fill"></i></span>
+                        <div>
+                            <h5>Phone Number</h5>
+                            <p>+89 0611404146</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span><i class="ri-map-pin-2-fill"></i></span>
+                        <div>
+                            <h5>Location</h5>
+                            <p>BK Ladkrabang</p>
+                        </div>
+                    </li>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Manual admin login check
+            if (username === 'admin' && password === 'polpolpol') {
+                alert('เข้าสู่ระบบผู้ดูแลระบบสำเร็จ!');
+                window.location.href = 'dashboardadmin.php';
+                return;
+            }
+
+            // เช็คผ่าน server ที่ login.php
+            const response = await fetch('login.php', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: new URLSearchParams({ username, pass_word: password })
+            });
+
+            const result = await response.json();
+
+            alert(result.message);
+            if (result.success) {
+                localStorage.setItem('user', JSON.stringify({ username }));
+                window.location.href = result.redirect;
+            }
+        });
+
+        // แสดง/ซ่อนรหัสผ่าน
+        function togglePassword() {
+            const passwordField = document.getElementById("password");
+            const icon = document.querySelector(".toggle-password");
+            if (passwordField.type === "password") {
+                passwordField.type = "text";
+                icon.classList.replace("ri-eye-off-line", "ri-eye-line");
+            } else {
+                passwordField.type = "password";
+                icon.classList.replace("ri-eye-line", "ri-eye-off-line");
+            }
+        }
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,170 @@
+/* จัดให้อีกส่วนหนึ่งอยู่กลาง */
+h1 {
+    text-align: center;  /* จัดให้อยู่กลาง */
+    margin-top: 50px;  /* เพิ่มระยะห่างจากด้านบน */
+    font-size: 2em;  /* ปรับขนาดตัวอักษร */
+    color: #333;  /* สีตัวอักษร */
+}
+
+/* กำหนดสีของ <h1 class="service-heading"> */
+.service-heading {
+    color: white; /* เปลี่ยนสีตัวอักษรเป็นสีขาว */
+}
+
+
+/* กล่องข้อมูลที่ใช้รับค่าตัวเลข */
+.expense-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.expense-box {
+    margin-bottom: 15px;
+    width: 100%;
+    max-width: 400px;
+    padding: 15px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.expense-box label {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.expense-box input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.1em;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-top: 5px;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+
+/* กล่องรวมราคา */
+.total-box {
+    margin-top: 30px;
+    padding: 15px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.total-box h3 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.total-box p {
+    font-size: 1.2em;
+    color: #333;
+}
+
+/* ปุ่มจ่ายเงิน */
+#payButton {
+    padding: 12px 25px;
+    font-size: 1.2em;
+    color: white;
+    background-color: #28a745;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+#payButton:hover {
+    background-color: #218838;
+}
+
+/* ฟอร์มส่งข้อความ */
+.message-box {
+    margin-top: 30px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.message-box label {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.message-box textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.1em;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 15px;
+    resize: vertical;
+}
+
+.message-box button {
+    padding: 12px 25px;
+    font-size: 1.2em;
+    color: white;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.message-box button:hover {
+    background-color: #0056b3;
+}
+
+/* Style สำหรับ QR Code Modal */
+.qr-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);  /* พื้นหลังโปร่งใส */
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;  /* ให้มันแสดงอยู่บนสุด */
+    display: flex;  /* ทำให้ modal ใช้ flexbox */
+    overflow: hidden; /* ซ่อนเนื้อหาที่เกินขอบ */
+}
+
+.qr-modal-content {
+    background-color: white;
+    padding: 40px;  /* เพิ่มขนาดของกล่อง */
+    border-radius: 10px;
+    text-align: center;
+    width: 500px;  /* ทำให้กล่อง QR Code ใหญ่ขึ้น */
+    max-width: 90%; /* ปรับขนาดให้ยืดหยุ่นตามหน้าจอ */
+}
+
+.qr-modal img.qr-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.qr-modal button {
+    padding: 10px 20px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.qr-modal button:hover {
+    background-color: #c82333;
+}

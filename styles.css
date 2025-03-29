@@ -1,0 +1,123 @@
+/* รีเซ็ตค่าเริ่มต้น */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #004080;
+    color: white;
+    padding: 15px 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.admin-info {
+    display: flex;
+    align-items: center;
+    background: #ffb3b3;
+    padding: 8px 15px;
+    border-radius: 20px;
+}
+
+.admin-info img {
+    width: 30px;
+    margin-right: 10px;
+}
+
+.container {
+    display: flex;
+    flex: 1;
+}
+
+.sidebar {
+    width: 250px;
+    background: #333;
+    padding-top: 20px;
+    height: 100vh;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 10px;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 10px;
+    transition: 0.3s;
+}
+
+.sidebar ul li a:hover,
+.sidebar ul li a.active {
+    background: #575757;
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.rounded-button {
+    background-color: #1856ff;
+    color: white; /* สีตัวอักษร */
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.rounded-button:hover {
+    background-color: #45a049; 
+}
+
+.btn {
+    padding: 15px;
+    background: #ddd;
+    border-radius: 10px;
+    text-decoration: none;
+    color: black;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #bbb;
+}
+
+footer {
+    text-align: center;
+    background: #004080;
+    color: white;
+    padding: 10px;
+}

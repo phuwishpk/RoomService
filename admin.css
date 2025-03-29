@@ -1,0 +1,58 @@
+/* ส่วนของโปรไฟล์ Admin */
+.admin-info {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.admin-info img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 2px solid #007bff;
+}
+
+.admin-info span {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* เอฟเฟกต์เมื่อโฮเวอร์ */
+.admin-info:hover {
+    background: #f0f0f0;
+    transform: scale(1.05);
+}
+
+/* หน้าข้อมูล Admin */
+.admin-page {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.admin-page h2 {
+    font-size: 24px;
+    color: #007bff;
+}
+
+/* ปุ่ม Logout */
+.logout-btn {
+    background: red;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.logout-btn:hover {
+    background: darkred;
+    transform: scale(1.05);
+}

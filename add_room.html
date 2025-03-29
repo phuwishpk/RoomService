@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เพิ่มห้องพัก</title>
+    <link rel="stylesheet" href="add_room.css">
+</head>
+<body>
+    <div class="container">
+        <h1>เพิ่มห้องพัก</h1>
+        <form action="process_room.php" method="post">
+            <label for="room-number">หมายเลขห้อง:</label>
+            <input type="text" id="room-number" name="room-number" required>
+
+            <label for="room-type">ประเภทห้อง:</label>
+            <input type="text" id="room-type" name="room-type" required>
+
+            <label for="room-price">ราคา:</label>
+            <input type="number" id="room-price" name="room-price" required>
+
+            <label for="room-status">สถานะห้อง:</label>
+            <select id="room-status" name="room-status" required>
+                <option value="available">ว่าง</option>
+                <option value="unavailable">ไม่ว่าง</option>
+                <option value="maintenance">กำลังปรับปรุง</option>
+            </select>
+
+            <button type="submit">เพิ่มห้องพัก</button>
+        </form>
+        <a href="index.php" class="back-button">ย้อนกลับ</a>
+    </div>
+</body>
+</html>

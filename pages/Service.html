@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Room Type 1 at RUKSABAI Room Service">
+    <meta name="keywords" content="Room, Booking, RUKSABAI">
+    <meta name="author" content="Your Name">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="Type.css"> <!-- Ensure this path is valid -->
+    <title>Book Your Stay at RUKSABAI | Service</title>
+</head>
+<body>
+    <nav>
+        <div class="nav__bar">
+            <div class="logo">
+                <div>RSB</div>
+                <span>RUKSABAI<br />Room Service</span>
+            </div>
+            <div class="nav__menu__btn">
+                <i class="ri-menu-line"></i>
+            </div>
+            <ul class="nav__links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#room">Room</a></li>
+                <li class="booking">
+                    <a href="#" class="booking__btn">Booking</a>
+                    <ul class="booking-dropdown">
+                        <li><a href="Type1.php">Room Type 1</a></li>
+                        <li><a href="Type2.php">Room Type 2</a></li>
+                        <li><a href="Type3.php">Room Type 3</a></li>
+                    </ul>
+                </li>
+                <li><a href="Service.html">Service</a></li>
+                <li><a href="../login.html">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="header">
+        <div class="section__container header__container">
+            <div class="text-content">
+                <p class="section__subheader"></p>
+                <h1 class="service-heading">Service</h1>
+            </div>
+        </div>
+    </header>
+
+    <main>
+      <!-- ลิงก์ไฟล์ CSS เฉพาะส่วน main -->
+      <link rel="stylesheet" href="main-style.css"> <!-- ลิงก์ไฟล์ CSS ใหม่เฉพาะ main -->
+      
+      <h1>ค่าบริการ</h1>
+      <form id="expenseForm" class="expense-form">
+          <div class="expense-box">
+              <label for="waterCharge">ค่าน้ำ:</label>
+              <input type="number" id="waterCharge" name="waterCharge" placeholder="กรอกค่าน้ำ" required>
+          </div>
+          <div class="expense-box">
+              <label for="electricityCharge">ค่าไฟ:</label>
+              <input type="number" id="electricityCharge" name="electricityCharge" placeholder="กรอกค่าไฟ" required>
+          </div>
+          <div class="expense-box">
+              <label for="maintenanceCharge">ค่าส่วนกลาง:</label>
+              <input type="number" id="maintenanceCharge" name="maintenanceCharge" placeholder="กรอกค่าส่วนกลาง" required>
+          </div>
+          
+          <!-- กล่องรวมราคา -->
+          <div class="total-box">
+              <h3>รวมราคา</h3>
+              <p id="totalPrice">0.00 บาท</p> <!-- แสดงราคาสุดท้าย -->
+          </div>
+  
+          <!-- ปุ่มจ่ายเงิน -->
+          <button type="button" id="payButton">จ่ายเงิน</button>
+          
+          <!-- ฟอร์มส่งข้อความ -->
+          <div class="message-box">
+              <h2>ส่งข้อความถึงแอดมิน</h2>
+              <label for="user_message">ข้อความของคุณ:</label><br>
+              <textarea name="user_message" id="user_message" rows="4" cols="50"></textarea><br><br>
+              <button type="submit">ส่งข้อความ</button>
+          </div>
+      </form>
+  
+      <div id="qrModal" class="qr-modal" style="display: none;"> <!-- ซ่อน QR Modal เมื่อหน้าโหลด -->
+        <div class="qr-modal-content">
+            <img src="..//assets/QRCode.jpg" alt="QR Code" class="qr-image">
+            <p>สแกนเพื่อจ่าย</p>
+            <button id="closeModal">ปิด</button>
+        </div>
+    </div>
+  
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script>
+          $(document).ready(function() {
+              // กดปุ่มจ่ายเงิน
+              $("#payButton").click(function() {
+                  // เมื่อคลิกปุ่ม "จ่ายเงิน" จะเปิด QR Modal ทันที
+                  $("#qrModal").fadeIn();  // แสดง QR Modal เมื่อคลิกปุ่มจ่ายเงิน
+              });
+  
+              // ปิด modal เมื่อกดปุ่ม "ปิด"
+              $("#closeModal").click(function() {
+                  $("#qrModal").fadeOut();  // ซ่อน QR Modal เมื่อกดปุ่มปิด
+              });
+          });
+      </script>
+  </main>
+  
+  
+
+    <footer class="footer">
+        <div class="section__container footer__container">
+            <div class="footer__col">
+                <div class="logo footer__logo">
+                    <div>RSB</div>
+                    <span>RUKSABAI<br />Room Service</span>
+                </div>
+                <p class="section__description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil,
+                    laudantium unde. Doloremque eaque debitis laborum labore voluptates
+                    iste molestiae consectetur.
+                </p>
+                <ul class="footer__socials">
+                    <li>
+                        <a href="#"><i class="ri-youtube-fill"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="ri-instagram-line"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="ri-facebook-fill"></i></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <h4>Contact Us</h4>
+                <div class="footer__links">
+                    <li>
+                        <span><i class="ri-phone-fill"></i></span>
+                        <div>
+                            <h5>Phone Number</h5>
+                            <p>+89 0611404146</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span><i class="ri-record-mail-line"></i></span>
+                        <div>
+                            <h5>Email</h5>
+                            <p>RUKSABAI@gmail.com</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span><i class="ri-map-pin-2-fill"></i></span>
+                        <div>
+                            <h5>Location</h5>
+                            <p>First St. NYC</p>
+                        </div>
+                    </li>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="Type.js"></script>
+</body>
+</html>

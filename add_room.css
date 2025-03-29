@@ -1,0 +1,83 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e9ecef; /* เปลี่ยนพื้นหลังเป็นสีเทาอ่อน */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* ความสูงเต็มจอ */
+}
+
+.container {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* เพิ่มเงาที่นุ่มนวล */
+    width: 90%;
+    max-width: 500px; /* ความกว้างสูงสุด */
+}
+
+h1 {
+    text-align: center;
+    color: #343a40; /* สีข้อความเข้ม */
+    margin-bottom: 20px; /* เพิ่มระยะห่างด้านล่าง */
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-top: 15px;
+    color: #495057; /* สีข้อความของ label */
+}
+
+input, select {
+    width: 100%;
+    padding: 10px; /* เพิ่ม padding เพื่อให้ดูสะดวกสบาย */
+    margin-top: 5px;
+    border: 1px solid #ced4da; /* สีกรอบที่อ่อนนุ่ม */
+    border-radius: 5px;
+    font-size: 16px; /* ขนาดฟอนต์ที่อ่านง่าย */
+    transition: border-color 0.3s; /* การเปลี่ยนสีกรอบ */
+}
+
+input:focus, select:focus {
+    border-color: #007bff; /* เปลี่ยนสีกรอบเมื่อมีการโฟกัส */
+    outline: none; /* ลบกรอบการโฟกัส */
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #28a745; /* เปลี่ยนเป็นสีเขียว */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+    font-size: 16px; /* ขนาดฟอนต์ที่อ่านง่าย */
+    transition: background-color 0.3s; /* การเปลี่ยนสีพื้นหลัง */
+}
+
+button:hover {
+    background-color: #218838; /* เปลี่ยนเป็นสีเขียวเข้มเมื่อ hover */
+}
+
+.back-button {
+    display: inline-block;
+    margin-top: 15px;
+    text-align: center;
+    color: #007bff; /* สีลิงค์ */
+    text-decoration: none; /* ไม่มีขีดเส้นใต้ */
+}
+
+.back-button:hover {
+    text-decoration: underline; /* ขีดเส้นใต้เมื่อ hover */
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .container {
+        width: 95%; /* ปรับความกว้างของ container เมื่ออยู่บนอุปกรณ์ที่มีขนาดเล็ก */
+    }
+}

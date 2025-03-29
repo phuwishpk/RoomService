@@ -1,0 +1,56 @@
+/* Reset ค่าเริ่มต้น */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* ตั้งค่าสไตล์พื้นหลังและการจัดกึ่งกลาง */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    color: white;
+}
+
+/* กล่องโปรไฟล์ */
+.profile-container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    backdrop-filter: blur(10px);
+}
+
+/* ชื่อผู้ใช้ */
+.profile-container h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+/* ปุ่มออกจากระบบ */
+.logout-btn {
+    background: #ff4b5c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: 0.3s;
+}
+
+.logout-btn:hover {
+    background: #ff1e3c;
+}
+
+/* ไอคอนผู้ใช้ */
+.profile-icon {
+    font-size: 60px;
+    margin-bottom: 10px;
+}
